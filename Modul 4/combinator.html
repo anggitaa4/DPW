@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selector</title>
+    <style>
+        /* no 1: descendant selector */
+        div p {
+            color: red;
+        }
+
+        /* no 2: child selector */
+        div > p {
+            background-color: yellow;
+        }
+
+        /* no 3: adjacent sibling selector */
+        div + p {
+            background-color: rgb(127, 126, 126);
+        }
+
+        /* no 4: general sibling selector */
+        div ~ p {
+            color: cyan;
+            background-color: rgb(101, 104, 105); 
+            padding: 10px; 
+    }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar Combinator Selector</h1>
+
+    <div>
+        <p>
+            Ini paragraf Selector no 1 (div p) → semua paragraf di dalam div menjadi berwarna merah.
+        </p>
+        <p>
+            Ini paragraf Selector no 2 (div > p) → paragraf anak langsung dari div memiliki background kuning.
+        </p>
+    </div>
+
+    <p>
+        Ini paragraf Selector no 3 (div + p) → paragraf pertama setelah div memiliki background abu-abu.
+    </p>
+
+    <p>
+        Ini paragraf Selector no 4 (div ~ p) → semua paragraf setelah div berwarna teks cyan tambahan nackground abu-abu.
+    </p>
+
+</body>
+</html>

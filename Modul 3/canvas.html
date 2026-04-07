@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mendysia Anggita">
+    <meta name="keywords" content="253307004">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #0b3840;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #80ceda;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+        }
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Mendysia Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar html.webp">Gambar</a></li>
+            <li><a href="event.webp">Event</a></li>
+            <li><a href="audio.mp3">Audio</a></li>
+            <li><a href="videoplay.mp4">Video</a></li>
+            <li><a href="svglion.jpg">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Canvas HTML</h1>
+
+        <!-- Canvas -->
+        <canvas id="canvas" width="400" height="400" style="background-color:#15b8e0"></canvas>
+        <p>
+        <strong>Kesimpulan ujicoba:</strong><br>
+        Pada percobaan ini, canvas berhasil menampilkan kotak yang bisa bergerak sendiri.
+        Pergerakan terlihat halus dan kotak memantul saat menyentuh tepi.
+        Hal ini menunjukkan bahwa canvas dapat digunakan untuk membuat animasi sederhana pada website.
+        </p>
+    </article>
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+<script src="js/main.js"></script>
+
+</body>
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let x = 50;
+let y = 50;
+let dx = 2;
+let dy = 2;
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "orange";
+    ctx.fillRect(x, y, 50, 50);
+
+    if (x + 50 > canvas.width || x < 0) dx = -dx;
+    if (y + 50 > canvas.height || y < 0) dy = -dy;
+
+    x += dx;
+    y += dy;
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</html>

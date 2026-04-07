@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <link rel="icon" type="gambar.jpg" href="gambar.jpg" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+<body>
+
+<div id="header">
+    <h1>SALAM KENAL</h1>
+</div>
+
+<div id="main">
+    <div id="link">
+        <ul>
+            <li><a href="#">Turki</a></li>
+            <li><a href="#">Paris</a></li>
+            <li><a href="#">London</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="content">
+    <h2>Form Pendaftaran Mahasiswa Baru</h2>
+    <form method="post" action="proses.php">
+        <table>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir:</td>
+                <td><input type="text" name="tempat_lahir"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir:</td>
+                <td><input type="text" name="tanggal_lahir" placeholder="DD-MM-YYYY"> (Tahun 2004-2007)</td>
+            </tr>
+            <tr>
+                <td>Agama:</td>
+                <td>
+                    <select name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>No. Ijazah SMA/SMK:</td>
+                <td><input type="text" name="no_ijazah"></td>
+            </tr>
+            <tr>
+                <td>Foto:</td>
+                <td><input type="file" name="foto" accept="gambar.jpg"> (Maks 20 KB)</td>
+            </tr>
+            <tr>
+                <td>Nama Ayah:</td>
+                <td><input type="text" name="nama_ayah"></td>
+            </tr>
+            <tr>
+                <td>Nama Ibu:</td>
+                <td><input type="text" name="nama_ibu"></td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><textarea name="alamat" rows="3" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>No. Telp:</td>
+                <td><input type="text" name="no_telp"></td>
+            </tr>
+            <tr>
+                <td>Nama Sekolah Awal:</td>
+                <td><input type="text" name="sekolah_awal"></td>
+            </tr>
+            <tr>
+                <td>Alamat Sekolah Awal:</td>
+                <td><input type="text" name="alamat_sekolah"></td>
+            </tr>
+            <tr>
+                <td>Jurusan Dipilih:</td>
+                <td><input type="text" name="jurusan"></td>
+            </tr>
+            <tr>
+                <td>Informasi ini dari:</td>
+                <td><input type="text" name="sumber_info"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Daftar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="footer">
+    <p><i>@Mendysia Anggita_253307004 2026</i></p>
+</div>
+
+</body>
+</html>

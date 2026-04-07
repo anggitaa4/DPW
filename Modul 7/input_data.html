@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pemasukan Data</title>
+
+    <style>
+        body {
+            font-family: Segoe UI;
+            background: #f4f7fb;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            background: #60175b;
+            color: rgb(83, 31, 31);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2c4a5e;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <h2>Input Nama</h2>
+    <p id="hasil">Klik tombol untuk memasukkan nama</p>
+    <button onclick="inputNama()">Masukkan Nama</button>
+</div>
+
+<script>
+function inputNama() {
+    let nama = prompt("Siapa nama Anda?");
+
+    if (nama === null || nama.trim() === "") {
+    document.getElementById("hasil").innerHTML = "Anda belum memasukkan nama ❗";
+    } else {
+        document.getElementById("hasil").innerHTML = "Hai, <b>" + nama + "</b> 👋";
+    }
+}
+</script>
+</body>
+</html>

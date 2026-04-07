@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pendaftaran Pertemuan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mendysia Anggita">
+    <meta name="keywords" content="253307004">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+            min-height: 600px; 
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            min-height: 600px;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #333;
+            padding: 0 5px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="range"] {
+            padding: 0;
+        }
+        .range-value {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: normal;
+            background: #eee;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 4px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px dashed #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Formulir Pendaftaran Pertemuan</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar html.webp">Gambar</a></li>
+                <li><a href="event.webp">Event</a></li>
+                <li><a href="audio.mp3">Audio</a></li>
+                <li><a href="videoplay.mp4">Video</a></li>
+                <li><a href="svglion.jpg">SVG</a></li>
+                <li><a href="canvas.jpg">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1 style="text-align:center;">Form Penjadwal Pertemuan</h1>
+            <form onsubmit="return validateForm()">
+                <!-- Informasi Pribadi -->
+                <fieldset>
+                    <legend>Informasi Pribadi</legend>
+
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+
+                    <label for="phone">No. Telepon (format XXXX-XXXXXX):</label>
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{6}" 
+                           placeholder="0812-345678" title="Gunakan format 4 angka, strip, 6 angka" required>
+                    <div class="note">Contoh: 0812-345678</div>
+
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" id="email" name="email" placeholder="nama@domain.com" required>
+
+                    <label for="dob">Tanggal Lahir (mm/dd/yyyy):</label>
+                    <input type="date" id="dob" name="dob" min="1987-01-01" max="1993-01-01" required>
+                    <div class="note">Rentang: 1 Januari 1987 – 1 Januari 1993</div>
+                </fieldset>
+
+                <!-- Permintaan Pertemuan -->
+                <fieldset>
+                    <legend>Permintaan Pertemuan</legend>
+
+                    <label for="tujuan">Tujuan Pertemuan:</label>
+                    <input type="text" id="tujuan" name="tujuan" placeholder="Misal: Rapat proyek" required>
+
+                    <label for="importance">Tingkat Kepentingan Pertemuan:</label>
+                    <div style="display: flex; align-items: center;">
+                        <input type="range" id="importance" name="importance" min="0" max="10" value="5" step="1"
+                               oninput="document.getElementById('importanceVal').textContent = this.value">
+                        <span id="importanceVal" class="range-value">5</span>
+                    </div>
+                    <div class="note">0 = Tidak Penting, 10 = Mendesak</div>
+
+                    <label for="meetingdate">Tanggal Pertemuan (harus setelah hari ini):</label>
+                    <input type="date" id="meetingdate" name="meetingdate" required>
+
+                    <label for="meetingtime">Jam Pertemuan (17.00 – 21.00 WIB):</label>
+                    <input type="time" id="meetingtime" name="meetingtime" min="17:00" max="21:00" required>
+                    <div class="note">Pukul 17.00 sampai 21.00</div>
+                </fieldset>
+
+                <input type="submit" value="Daftar">
+            </form>
+
+            <script>
+                (function() {
+                    const today = new Date();
+                    const tomorrow = new Date(today);
+                    tomorrow.setDate(tomorrow.getDate() + 1);
+                    const year = tomorrow.getFullYear();
+                    const month = String(tomorrow.getMonth() + 1).padStart(2, '0');
+                    const day = String(tomorrow.getDate()).padStart(2, '0');
+                    const minDate = `${year}-${month}-${day}`;
+                    document.getElementById('meetingdate').setAttribute('min', minDate);
+                })();
+
+                function validateForm() {
+                    const dob = new Date(document.getElementById('dob').value);
+                    const minDob = new Date('1987-01-01');
+                    const maxDob = new Date('1993-01-01');
+                    if (dob < minDob || dob > maxDob) {
+                        alert('Tanggal lahir harus antara 1 Januari 1987 dan 1 Januari 1993.');
+                        return false;
+                    }
+                    const meetingDate = new Date(document.getElementById('meetingdate').value);
+                    const today = new Date();
+                    today.setHours(0,0,0,0);
+                    if (meetingDate <= today) {
+                        alert('Tanggal pertemuan harus setelah hari ini.');
+                        return false;
+                    }
+                    const timeInput = document.getElementById('meetingtime');
+                    const timeValue = timeInput.value;
+                    if (timeValue < "17:00" || timeValue > "21:00") {
+                        alert('Jam pertemuan harus antara 17.00 dan 21.00 WIB.');
+                        return false;
+                    }
+
+                    return true; // jika semua lolos
+                }
+            </script>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

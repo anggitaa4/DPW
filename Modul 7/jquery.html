@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Program Menu jQuery</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        .ui-menu {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Menu Navigasi jQuery</h2>
+
+    <ul id="menu Utama">
+        <li>
+            <div>Beranda</div>
+        </li>
+        <li>
+            <div>Profil Produk</div>
+            <ul>
+                <li>
+                    <div>Elektronik</div>
+                </li>
+                <li>
+                    <div>Pakaian</div>
+                </li>
+                <li>
+                    <div>Otomotif</div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>Kontak Kami</div>
+        </li>
+        <li class="ui-state-disabled">
+            <div>Layanan Segera Hadir</div>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+            // Inisialisasi widget menu [cite: 259]
+            $("#menu").menu();
+        });
+    </script>
+
+</body>
+
+</html>

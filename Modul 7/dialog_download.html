@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progress Bar Modern</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <style>
+    body {
+      font-family: Segoe UI;
+      background: #f4f7fb;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      width: 350px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    #progressbar {
+      margin: 20px 0;
+      height: 25px;
+    }
+
+    #info {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background: gray;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Download Progress</h2>
+
+  <div id="progressbar"></div>
+
+  <div id="info">Status: Menunggu...</div>
+
+  <button id="start">Start Download</button>
+</div>
+
+<script>
+let value = 0;
+
+$("#progressbar").progressbar({
+  value: 0
+});
+
+$("#start").click(function(){
+  value = 0;
+  $("#start").prop("disabled", true);
+  $("#info").text("Status: Memulai download...");
+
+  let interval = setInterval(function(){
+    value += 10;
+
+    $("#progressbar").progressbar("value", value);
+    $("#info").text("Progress: " + value + "%");
+
+    if (value >= 100) {
+      clearInterval(interval);
+      $("#info").text("Status: Download selesai ✅");
+      $("#start").prop("disabled", false);
+      alert("Download selesai!");
+    }
+  }, 500);
+});
+</script>
+
+</body>
+</html>

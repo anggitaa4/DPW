@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mendysia Anggita">
+    <meta name="keywords" content="253307004">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #0087e7;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #2f768e;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 400px; 
+            overflow: auto;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        svg {
+            margin: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Mendysia Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.mp3">Audio</a></li>
+                <li><a href="video.mp4">Video</a></li>
+                <li><a href="image.svg">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Contoh SVG</h1>
+            <!-- Tiga SVG sebelumnya -->
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+            <svg width="100" height="100">
+                <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+            </svg>
+            <svg width="400" height="180">
+                <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+            </svg>
+
+            <!-- Tambahan poligon SVG dari file image.png -->
+            <h2>Elemen poligon SVG</h2>
+            <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="100,10 150,190 50,190" style="fill:lime;stroke:purple;stroke-width:3" />
+                <!-- Teks fallback untuk browser lama -->
+                Maaf, browser Anda tidak mendukung SVG inline.
+            </svg>
+
+            <p>
+                <strong>Kesimpulan ujicoba:</strong> Setelah menambahkan CSS, tampilan halaman berubah menjadi layout dua kolom dengan navigasi di kiri dan artikel di kanan. Header dan footer memiliki latar belakang dan warna teks yang berbeda. Navigasi menggunakan daftar link yang rapi. Perbedaan utama dari sebelumnya adalah halaman yang awalnya hanya teks biasa kini memiliki struktur visual yang jelas. Media query membuat tampilan responsif pada layar kecil. <br>
+                NIM: 253307004 <br>
+                Nama: Mendysia Anggita
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Image Map</title>
+    <link rel="icon" type="img/png" href="workplace.jpeg" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/main.css'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h1>Mendysia WorkPlace</h1>
+</div>
+
+<div id="main">
+    <div id="link">
+        <ul>
+            <li><a href="#">London</a></li>
+            <li><a href="#">Paris</a></li>
+            <li><a href="#">Tokyo</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="content">
+    <!-- Image map yang benar: gunakan tag img, bukan map src -->
+    <timg src="workpace.jpg" alt="workplace" usemap="#petagambar" style="max-width:100%; height:auto;">
+
+    <map name="petagambar">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://uici.ac.id/11-tips-merawat-komputer/" target="_blank">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.nytimes.com/wirecutter/reviews/best-wireless-carrier/" target="_blank">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="https://www.google.com/imgres?q=gambar%20coffe&imgurl=https%3A%2F%2Fplus.unsplash.com%2Fpremium_photo-1674327105074-46dd8319164b%3Ffm%3Djpg%26q%3D60%26w%3D3000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmV8ZW58MHx8MHx8fDA%253D&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fcoffe&docid=QyWJQGWBWlX0sM&tbnid=puB7IaHS3w-iHM&vet=12ahUKEwjTzbDv4JCTAxVJ_DgGHRCxE9cQnPAOegQIGBAB..i&w=3000&h=2000&hcb=2&ved=2ahUKEwjTzbDv4JCTAxVJ_DgGHRCxE9cQnPAOegQIGBAB" target="_blank">
+    </map>
+
+    <p>Tag HTML <code>&lt;map&gt;</code> mendefinisikan peta gambar. Peta gambar adalah gambar dengan area yang dapat diklik. Area ditentukan dengan satu atau lebih tag <code>&lt;area&gt;</code>.</p>
+    <p><strong>Catatan:</strong> Pastikan file <code>gambar/workspace.jpg</code> tersedia. Jika tidak, area tetap dapat diklik meskipun gambar tidak tampil.</p>
+</div>
+</body>
+</html>

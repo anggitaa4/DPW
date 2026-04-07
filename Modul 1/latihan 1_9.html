@@ -1,23 +1,34 @@
 <!DOCTYPE html>
+<html lang="id">
 <head>
-    <title>Halaman HTML saya</title>
+    <meta charset="UTF-8">
+    <title>Latihan 1.9 - Iframe</title>
 </head>
 <body>
-
-<h1>Kisah-kisah disekolah</h1>
+    <h1>Kisah-kisah di Sekolah</h1>
     <p>
-    Masa sekolah adalah masa yang menyenangkan bagiku. Sebagian besar waktu hidupku sampai saat ini
-    dihabiskan untuk sekolah, dan aku sangat menikmati saat-saat itu. Inilah sebagian kisah-kisahku disekolah.
-</p>
-<hr>
-<iframe width="30%" height="179" src="latihan_1.html"></iframe>
-<iframe width="30%" height="179" src="latihan_1_2.html" name="if"></iframe>
-<iframe width="30%" height="179" src="latihan_1_3.html" scrolling="no"></iframe>
-
-<!-- Kesimpulan -->
-<p>
-<del>Penggunaan iframe memungkinkan kita menampilkan halaman lain di dalam satu halaman web.</del>
-</p>
-
+        Masa sekolah adalah masa yang menyenangkan bagiku. Sebagian besar waktu hidupku sampai saat ini
+        dihabiskan untuk sekolah, dan aku sangat menikmati saat-saat itu. Inilah sebagian kisah-kisahku di sekolah.
+    </p>
+    <hr>
+    
+    <!-- Link untuk mengubah iframe -->
+    <p><a href="latihan 1_2.html" target="iframe_target">Halaman 2 (latihan 1.2)</a> | 
+       <a href="latihan 1_3.html" target="iframe_target">Halaman 3 (latihan 1.3)</a> | 
+       <a href="latihan 1_4.html" target="iframe_target">Halaman 4 (latihan 1.4)</a></p>
+    
+    <!-- Iframe dengan name="iframe_target" -->
+    <iframe width="30%" height="179" src="latihan 1_1.html" name="iframe_target"></iframe>
+    <iframe width="30%" height="179" src="latihan 1_2.html" frameborder="0"></iframe>
+    <iframe width="30%" height="179" src="latihan 1_3.html" scrolling="no"></iframe>
+    
+    <hr>
+    
+    <h3>Kesimpulan:</h3>
+    <p><del>
+        Ketika link "Halaman 2" diklik, halaman tersebut akan terbuka di iframe pertama yang memiliki name="iframe_target". 
+        Ini menunjukkan bahwa dengan menambahkan atribut name pada iframe dan target pada link, kita dapat mengontrol 
+        di mana halaman yang dituju akan ditampilkan.
+    </del></p>
 </body>
 </html>

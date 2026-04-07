@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Studi Kasus - Politeknik Negeri Madiun</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        /* Body */
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, blue, darkblue);
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: yellow;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            color: white;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            background-color: white;
+        }
+
+        /* Menu kiri */
+        nav {
+            width: 25%;
+            padding: 20px;
+            border: 2px dashed #7aa0c4;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 5px;
+            transition: 0.2s;
+        }
+
+        /* Hover */
+        nav a:hover {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Menu aktif */
+        nav a.active {
+            font-weight: bold;
+        }
+
+        /* Konten */
+        main {
+            width: 75%;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* Logo */
+        main img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Judul TI */
+        .judul-ti {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin: 5px 0;
+        }
+
+        /* Nama kampus */
+        .judul-kampus {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Deskripsi */
+        .motto {
+            font-family: 'Open Sans', sans-serif;
+            color: red;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #b0c4de;
+            padding: 10px;
+            text-align: right;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Halo CSS !</h1>
+        <p>Ini Adalah Website Mendysia</p>
+    </header>
+
+    <!-- Isi -->
+    <div class="container">
+
+        <!-- Menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+                <li><a href="#" class="active">Menu 6</a></li>
+            </ul>
+        </nav>
+
+        <!-- Konten -->
+        <main>
+            <img src="LOGO Politeknik_Negeri_Madiun.webp" alt="Logo">
+
+            <div class="judul-ti">TI</div>
+            <div class="judul-kampus">Politeknik Negeri Madiun</div>
+
+            <p class="motto">
+                Mewujudkan pendidikan tinggi vokasi<br>
+                dalam bidang Teknologi Informasi<br>
+                dan penerapannya yang berkualitas,<br>
+                inovatif dan berdaya saing Nasional.
+            </p>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Mendysia Anggita Putri | 2533070004 | TI-2A
+    </footer>
+
+</body>
+</html>

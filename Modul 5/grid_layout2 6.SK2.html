@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid Layout - Skenario 2</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #7ec0f3;
+            grid-template-columns: auto auto auto auto; 
+            padding: 10px;
+        }
+        /* Skenario 2 */
+        .item1 {
+            grid-column: 1 / 4; 
+            background-color: rgba(179, 71, 71, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .item {
+            background-color: rgba(179, 71, 71, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <div class="footer-text">
+        <p>Kesimpulan Skenario 2: Penggunaan grid-column: 1 / 4, pada elemen pertama membuatnya melebar secara horizontal dengan menempati tiga kolom sekaligus (dari garis kolom 1 hingga garis kolom 4). Hal ini menyebabkan elemen nomor 2 terdorong ke kolom ke-4 pada baris yang sama,
+            sementara elemen sisanya otomatis berpindah ke baris baru di bawahnya.</p>
+    </div>
+</body>
+</html>

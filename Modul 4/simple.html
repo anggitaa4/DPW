@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Simple Selector</title>
+    <style>
+        /* style untuk judul */
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: teal;
+            padding: 15px;
+            border: 3px solid black;
+        }
+
+        /* selector untuk semua elemen <p> */
+        p {
+            text-align: center;
+            color: aqua;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: rgb(139, 137, 137);
+        }
+
+        /* selector berdasarkan id */
+        #kalimat {
+            text-align: left;
+            color: red;
+            background-color: lightyellow;
+        }
+
+        /* selector berdasarkan class */
+        .center {
+            text-align: center;
+            color: chocolate;
+            background-color: lightblue;
+        }
+
+        /* selector p dengan class tengah */
+        p.tengah {
+            text-align: center;
+            color: darkmagenta;
+            display: block;
+            background-color: #777777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar Simple Selector CSS</h1>
+
+    <p>Penggunaan CSS sangat membantu web designer dalam menyusun halaman yang konsisten pada proyek pembuatan halaman web.</p>
+
+    <p id="kalimat">
+        paragraf dengan id="kalimat". Teks rata kiri berwarna merah. Border dan padding tetap dari p.</p>
+
+    <p class="center">
+        paragraf dengan class="center". Teks tengah dengan warna coklat (chocolate).</p>
+
+    <p class="tengah">
+        paragraf dengan class="tengah". Background abu-abu gelap, teks ungu tua, border dan padding tetap.
+    </p>
+
+</body>
+</html>

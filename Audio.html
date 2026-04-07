@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Audio </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mendysia Anggita">
+    <meta name="keywords" content="253307004">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+            height: 300px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            min-height: 300px;
+            height: auto;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Mendysia Website - Belajar Audio</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="videoplay.mp4">Video</a></li>
+                <li><a href="svglion.jpg">SVG</a></li>
+                <li><a href="canvas.jpg">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Contoh Pemutar Audio</h1>
+
+            <!-- Audio 1: dengan autoplay (tanpa muted) -->
+            <p><strong>1. Audio dengan autoplay (tanpa muted):</strong></p>
+            <audio controls autoplay>
+                <source src="audio.mp3" type="audio/mpeg">
+                Browser tidak mendukung audio.
+            </audio>
+
+            <!-- Audio 2: dengan muted (tanpa autoplay) -->
+            <p><strong>2. Audio dengan muted (tanpa autoplay):</strong></p>
+            <audio controls muted>
+                <source src="audio.mp3" type="audio/mpeg">
+                Type: Audio
+                Browser tidak mendukung audio.
+            </audio>
+
+            <!-- Kesimpulan sederhana -->
+            <h3>Kesimpulan:</h3>
+            <p>
+                - Audio pertama menggunakan <code>autoplay</code>. Di browser modern, autoplay biasanya diblokir karena bersuara dan belum ada interaksi pengguna. Jadi tidak otomatis bunyi.<br>
+                - Audio kedua menggunakan <code>muted</code> (senyap). Jika ditambah <code>autoplay muted</code>, maka akan otomatis main tapi tanpa suara. Di sini tidak pakai autoplay jadi diam saja.<br>
+                - Agar autoplay berfungsi, harus disertai <code>muted</code> atau pengguna sudah pernah berinteraksi dengan halaman.<br>
+                - NIM: 253307004 | Nama: Mendysia Anggita
+            </p>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Lengkap</title>
+    <style>
+        .wadah-flex {
+            display: flex;
+            margin-bottom: 30px;
+            background-color: lightblue;
+        }
+
+        .wadah-flex div {
+            background-color: rgb(167, 14, 114);
+            margin: 10px;
+            padding: 20px;
+        }
+        /* SKENARIO 1 (default row) */
+        .flex1 {
+            flex-direction: row;
+        }
+        /* SKENARIO 2 */
+        .flex2 div {
+            flex: 1;
+        }
+        /* SKENARIO 3 */
+        .flex3 {
+            flex-wrap: wrap;
+        }
+        /* SKENARIO 4 */
+        .flex4 {
+            justify-content: space-between;
+        }
+        /* SKENARIO 5 */
+        .flex5 {
+            flex-wrap: wrap-reverse;
+        }
+        /* SKENARIO 6 */
+        .flex6 {
+            align-items: center;
+            height: 150px;
+        }
+        /* FLEX-DIRECTION */
+        .flex7 {
+            flex-direction: column;
+        }
+        .flex8 {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+
+<body>
+<h2>Skenario 1 (flex-direction: row)</h2>
+<div class="wadah-flex flex1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Item tersusun dari kiri ke kanan.</p>
+
+<hr>
+<h2>Skenario 2 (flex:1)</h2>
+<div class="wadah-flex flex2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Semua item memiliki ukuran sama.</p>
+
+<hr>
+<h2>Skenario 3 (flex-wrap)</h2>
+<div class="wadah-flex flex3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+<p>Kesimpulan: Item turun ke baris baru jika penuh.</p>
+
+<hr>
+<h2>Skenario 4 (justify-content)</h2>
+<div class="wadah-flex flex4">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Jarak antar item menjadi merata.</p>
+
+<hr>
+<h2>Skenario 5 (wrap-reverse)</h2>
+<div class="wadah-flex flex5">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Arah baris dibalik.</p>
+
+<hr>
+<h2>Skenario 6 (align-items)</h2>
+<div class="wadah-flex flex6">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Posisi vertikal bisa diatur (tengah).</p>
+
+<hr>
+<h2>Tambahan 1 (flex-direction: column)</h2>
+<div class="wadah-flex flex7">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Item tersusun dari atas ke bawah.</p>
+
+<hr>
+<h2>Tambahan 2 (flex-direction: row-reverse)</h2>
+<div class="wadah-flex flex8">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>Kesimpulan: Urutan item dibalik dari kanan ke kiri.</p>
+    </body>
+</html>

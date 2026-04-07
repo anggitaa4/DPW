@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Event - Mouse Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mendysia Anggita">
+    <meta name="keywords" content="253307004">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #669900;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto; /* Diubah dari 300px menjadi auto agar mengikuti konten */
+            min-height: 300px;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /* Style tambahan untuk interaksi mouse */
+        .gallery-img {
+            width: 130px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        /* Style saat mouse hover (akan diatur via JS juga, tapi ini sebagai fallback/estetika) */
+        .gallery-img:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* Style untuk gambar yang sedang di-click (feedback instan) */
+        .gallery-img:active {
+            opacity: 0.7;
+        }
+        /* Area pesan untuk menampilkan event */
+        .event-log {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>ANGGI WEBSITE - MOUSE EVENT DEMO</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li> <!-- Link ke halaman ini sendiri -->
+                <li><a href="audio.mp3">Audio</a></li>
+                <li><a href="videoplay.mp4">Video</a></li>
+                <li><a href="svglion.jpg">SVG</a></li>
+                <li><a href="canvas.jpg">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>Galeri dengan Mouse Event</h2>
+            <p>Coba interaksi dengan gambar di bawah ini: Klik, Dobel Klik, Hover (sentuh), dan Hover keluar.</p>
+            
+            <!-- Area untuk menampilkan log event -->
+            <div id="eventMessage" class="event-log">
+                💬 Arahkan mouse atau klik pada gambar untuk melihat event.
+            </div>
+
+            <!-- Gallery dengan mouse event -->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                <!-- Gambar 1: dengan event onclick, onmouseover, onmouseout -->
+                <img src="pemandangan1.jpg" alt="Pemandangan 1" class="gallery-img" id="img1"
+                     onclick="showEvent('Klik: Pemandangan 1')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 1')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 1')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 1')">
+
+                <!-- Gambar 2 -->
+                <img src="pemandangan 2.jpg" alt="Pemandangan 2" class="gallery-img" id="img2"
+                     onclick="showEvent('Klik: Pemandangan 2')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 2')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 2')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 2')">
+
+                <!-- Gambar 3 -->
+                <img src="pemandangan3.jpg" alt="Pemandangan 3" class="gallery-img" id="img3"
+                     onclick="showEvent('Klik: Pemandangan 3')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 3')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 3')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 3')">
+
+                <!-- Gambar 4 -->
+                <img src="pemndangan4.jpg" alt="Pemandangan 4" class="gallery-img" id="img4"
+                     onclick="showEvent('Klik: Pemandangan 4')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 4')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 4')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 4')">
+
+                <!-- Gambar 5 -->
+                <img src="pemandangan5.jpg" alt="Pemandangan 5" class="gallery-img" id="img5"
+                     onclick="showEvent('Klik: Pemandangan 5')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 5')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 5')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 5')">
+
+                <!-- Gambar 6 -->
+                <img src="pemandangan6.jpg" alt="Pemandangan 6" class="gallery-img" id="img6"
+                     onclick="showEvent('Klik: Pemandangan 6')"
+                     ondblclick="showEvent('Double Klik: Pemandangan 6')"
+                     onmouseover="highlightImage(this, true, 'Pemandangan 6')"
+                     onmouseout="highlightImage(this, false, 'Pemandangan 6')">
+            </div>
+
+            <!-- Catatan: Jika gambar tidak tersedia, fallback online bisa diaktifkan -->
+            <!-- <p style="font-size: 0.9em; color: #555;">* Jika gambar lokal tidak tampil, pastikan file gambar tersedia di folder yang sama.</p> -->
+        </article>
+    </section>
+
+    <!-- Footer bisa ditambahkan jika diperlukan, tapi tidak ada di file asli -->
+    <!-- <footer>...</footer> -->
+
+    <!-- Script untuk menangani mouse event -->
+    <script>
+        // Fungsi untuk menampilkan pesan event di div eventMessage
+        function showEvent(message) {
+            const msgBox = document.getElementById('eventMessage');
+            if (msgBox) {
+                msgBox.innerHTML = '🖱️ ' + message + ' - ' + new Date().toLocaleTimeString();
+            }
+        }
+
+        // Fungsi untuk highlight gambar saat mouse over/out
+        function highlightImage(imgElement, isOver, imgName) {
+            if (isOver) {
+                // Saat mouse di atas gambar (onmouseover)
+                imgElement.style.border = '3px solid #ff6600';
+                imgElement.style.transform = 'scale(1.05)';
+                imgElement.style.transition = 'all 0.2s ease';
+                // Tampilkan pesan di log (opsional, bisa juga tidak)
+                // showEvent('Hover: ' + imgName); // Bisa di-uncomment jika ingin log saat hover
+            } else {
+                // Saat mouse keluar dari gambar (onmouseout)
+                imgElement.style.border = '2px solid transparent';
+                imgElement.style.transform = 'scale(1)';
+                // Tampilkan pesan keluar
+                showEvent('Hover keluar: ' + imgName);
+            }
+        }
+
+        // Contoh tambahan: menggunakan event lain seperti onwheel (mouse wheel)
+        // Kita bisa menambahkan event listener secara manual, tapi di sini kita fokus pada event di atribut HTML.
+        // Sebagai demonstrasi, kita bisa tambahkan event 'onmouseenter' dan 'onmouseleave' tetapi sudah diwakili over/out.
+        
+        // Bonus: Menambahkan event dobel klik ganda dengan pesan berbeda (sudah ada ondblclick di atas)
+        // Untuk memastikan dobel klik tidak memicu dua kali klik biasa, kita tidak perlu tambahan.
+    </script>
+
+    <!-- Penjelasan event yang digunakan sesuai referensi W3Schools:
+         - onclick: Dipicu saat gambar diklik.
+         - ondblclick: Dipicu saat gambar di-dobel-klik.
+         - onmouseover: Dipicu saat kursor mouse masuk ke area gambar.
+         - onmouseout: Dipicu saat kursor mouse keluar dari area gambar.
+         Event tambahan (seperti onmouseenter/onmouseleave) memiliki perilaku mirip namun tidak bubbling.
+         Di sini kita gunakan over/out karena sesuai permintaan umum "mouse event".
+    -->
+</body>
+</html>

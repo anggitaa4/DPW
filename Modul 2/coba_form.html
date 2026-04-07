@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Form Sederhana - Uji Coba Method & Target</title>
+    <link rel="icon" type="image/png" href="/gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Uji Coba Form dengan Method dan Target</h1>
+<p class="note">
+    <strong>Instruksi:</strong> Isi data, tekan tombol reset/kirim, dan amati perilaku URL serta tab browser.
+    Ujicoba dilakukan dengan menambahkan atribut <code>method</code> (get/post) dan <code>target</code> (_self, _blank).
+</p>
+
+<!-- Form 1: method="get" target="_self" -->
+<h2>1. Method GET, Target _self</h2>
+<form action="" method="get" target="_self">
+    <label for="depa1">Nama Depan:</label><br>
+    <input type="text" id="depa1" name="nama_depan" value="Mendysia"><br>
+    <label for="n_belakang1">Nama Belakang:</label><br>
+    <input type="text" id="n_belakang1" name="nama_belakang" value="Putri"><br><br>
+    <input type="submit" value="Kirim (GET _self)">
+    <input type="reset" value="Reset">
+</form>
+
+<!-- Form 2: method="get" target="_blank" -->
+<h2>2. Method GET, Target _blank</h2>
+<form action="" method="get" target="_blank">
+    <label for="depa2">Nama Depan:</label><br>
+    <input type="text" id="depa2" name="nama_depan" value="Mendysia"><br>
+    <label for="n_belakang2">Nama Belakang:</label><br>
+    <input type="text" id="n_belakang2" name="nama_belakang" value="Anggita"><br><br>
+    <input type="submit" value="Kirim (GET _blank)">
+    <input type="reset" value="Reset">
+</form>
+
+<hr>
+
+<!-- Kesimpulan -->
+<h2>Kesimpulan Uji Coba</h2>
+<p>
+    Berdasarkan pengujian yang dilakukan dengan mengisi data dan menekan tombol "Kirim" serta "Reset" pada masing-masing form, diperoleh kesimpulan sebagai berikut:
+    <ul>
+        <li><strong>Tombol Reset:</strong> Mengembalikan nilai input ke nilai awal yang ditentukan pada atribut <code>value</code> (yaitu "Sedi" dan "Pamir").</li>
+        <li><strong>Tombol Kirim:</strong> Mengirimkan data ke URL yang ditentukan pada atribut <code>action</code> (dalam kasus ini <code>action=""</code> berarti halaman itu sendiri).</li>
+        <li><strong>Perbedaan Method GET dan POST:</strong>
+            <ul>
+                <li><strong>GET:</strong> Data dikirim melalui URL (query string). Setelah submit, URL berubah menjadi <code>?nama_depan=...&nama_belakang=...</code>. Data terlihat jelas di address bar.</li>
+                <li><strong>POST:</strong> Data dikirim dalam body HTTP request, tidak terlihat di URL. URL tetap bersih (tidak ada query string). Cocok untuk data sensitif.</li>
+            </ul>
+        </li>
+        <li><strong>Perbedaan Target:</strong>
+            <ul>
+                <li><strong><code>target="_self"</code>:</strong> Hasil submit ditampilkan di tab/jendela yang sama (halaman saat ini).</li>
+                <li><strong><code>target="_blank"</code>:</strong> Hasil submit dibuka di tab baru (atau jendela baru, tergantung pengaturan browser).</li>
+            </ul>
+        </li>
+        <li><strong>Kombinasi:</strong> Dengan GET + _blank, tab baru terbuka dan URL berisi data. Dengan POST + _blank, tab baru terbuka namun URL tidak menampilkan data.</li>
+    </ul>
+    Secara umum, atribut <code>method</code> mengontrol cara pengiriman data, sedangkan <code>target</code> mengontrol tempat tampilan respons.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Class Selector</title>
+    <style>
+        /* paragraf disembunyikan */
+        p {
+            display: none;
+            background-color: darkgray;
+            padding: 20px;
+            color: white;
+        }
+
+        /* menampilkan p saat div di-hover */
+        div:hover p {
+            display: block;
+        }
+
+        /* style link */
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* saat mouse diarahkan ke link */
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pseudo Class Selector</h1>
+
+    <div>
+        Letakkan kursor disini untuk melihat div element
+        <p>Saya adalah element p</p>
+    </div>
+
+    <br>
+
+    <a href="#">Ini adalah link (arahkan mouse ke sini)</a>
+
+</body>
+</html>

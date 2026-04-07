@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alert Modern</title>
+
+<style>
+body{
+  font-family:Segoe UI;
+  background:linear-gradient(135deg,#14705f);
+  text-align:center;
+  padding:50px;
+}
+.container{
+  background:white;
+  padding:30px;
+  width:350px;
+  margin:auto;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  animation:fadeIn 1s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+button{
+  background:#4CAF50;
+  color:white;
+  padding:12px 25px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+button:hover{
+  background:#45a049;
+  transform:scale(1.05);
+}
+
+/* Judul */
+h2{
+  margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h2>Program Alert</h2>
+<button onclick="tampilAlert()">Klik</button>
+</div>
+
+<script>
+function tampilAlert(){
+let konfirmasi = confirm("Apakah kamu yakin ingin menampilkan alert?");
+  
+  if(konfirmasi){
+    alert("Halo! Ini adalah alert ");
+  } else {
+    alert("Dibatalkan ");
+  }
+}
+</script>
+</body>
+</html>

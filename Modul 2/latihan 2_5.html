@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div dan Span</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; color: #333; }
+        #header { background: #1a73e8; color: #fff; padding: 20px 30px; text-align: center; }
+        #header h1 { font-size: 1.8em; }
+        #main { display: flex; min-height: calc(100vh - 110px); }
+        #link { width: 200px; background: #fff; border-right: 1px solid #ddd; padding: 20px; }
+        #link ul { list-style: none; padding: 0; }
+        #link ul li { margin: 8px 0; }
+        #link ul li a { text-decoration: none; color: #1a73e8; font-weight: bold; }
+        #content { flex: 1; padding: 24px; background: #fff; margin: 16px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+        #footer { background: #333; color: #ccc; text-align: center; padding: 14px; font-size: .9em; }
+        #content h2 { margin-top: 24px; color: #1a73e8; }
+        #content p  { margin: 6px 0 10px; line-height: 1.6; }
+        .bookmark-nav { background: #e8f0fe; border: 1px solid #c5d4f5; border-radius: 6px; padding: 12px 18px; margin-bottom: 20px; }
+        .bookmark-nav p { margin: 4px 0; }
+        .bookmark-nav a { color: #1a73e8; }
+        .kesimpulan { background: #fffde7; border-left: 4px solid #f9a825; padding: 8px 12px; margin-top: 8px; }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h1>Judul/Header Website</h1>
+</div>
+
+<div id="main">
+    <div id="link">
+        <ul>
+            <li><a href="#">London</a></li>
+            <li><a href="#">Paris</a></li>
+            <li><a href="#">Turki</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <!-- Bookmark navigation -->
+        <div class="bookmark-nav">
+            <p><a href="#C4">Jump to Chapter 4</a></p>
+            <p><a href="#C10">Jump to Chapter 10</a></p>
+            <p><a href="#C20">Jump to Chapter 20</a></p>
+            <p>Ubah Dengan kesimpulan ujicoba disini </p>
+        </div>
+
+        <!-- Chapters 1 – 20 -->
+        <h2>Chapter 1</h2>
+        <p>This chapter explains ba bla bla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+
+        <h2>Chapter 2</h2>
+        <p>This chapter explains ba bla bla. Donec in efficitur leo, in commodo odio. Sed posuere consectetur est at lobortis.</p>
+
+        <h2>Chapter 3</h2>
+        <p>This chapter explains ba bla bla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+        <h2 id="C4">Chapter 4</h2>
+        <p>This chapter explains ba bla bla. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur.</p>
+
+        <h2>Chapter 5</h2>
+        <p>This chapter explains ba bla bla. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna.</p>
+
+        <h2>Chapter 6</h2>
+        <p>This chapter explains ba bla bla. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.</p>
+
+        <h2>Chapter 7</h2>
+        <p>This chapter explains ba bla bla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus.</p>
+
+        <h2>Chapter 8</h2>
+        <p>This chapter explains ba bla bla. Porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus.</p>
+
+        <h2>Chapter 9</h2>
+        <p>This chapter explains ba bla bla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio.</p>
+
+        <h2 id="C10">Chapter 10</h2>
+        <p>This chapter explains ba bla bla. Sem non risus ultrices mattis. Phasellus ornare purus sed augue placerat, eu dignissim.</p>
+
+        <h2>Chapter 11</h2>
+        <p>This chapter explains ba bla bla. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <h2>Chapter 12</h2>
+        <p>This chapter explains ba bla bla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere.</p>
+
+        <h2>Chapter 13</h2>
+        <p>This chapter explains ba bla bla. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus.</p>
+
+        <h2>Chapter 14</h2>
+        <p>This chapter explains ba bla bla. Vel augue velit aliquet nisi, vitae adipiscing nunc interdum nec. Morbi leo risus.</p>
+
+        <h2>Chapter 15</h2>
+        <p>This chapter explains ba bla bla. Porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.</p>
+
+        <h2>Chapter 16</h2>
+        <p>This chapter explains ba bla bla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+        <h2>Chapter 17</h2>
+        <p>This chapter explains ba bla bla. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis.</p>
+
+        <h2>Chapter 18</h2>
+        <p>This chapter explains ba bla bla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed posuere.</p>
+
+        <h2>Chapter 19</h2>
+        <p>This chapter explains ba bla bla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio.</p>
+
+        <h2 id="C20">Chapter 20</h2>
+        <p>This chapter explains ba bla bla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus.</p>
+
+        <p class="kesimpulan">
+            <strong>Kesimpulan Bookmark Link:</strong><br>
+            Link bookmark menggunakan atribut <em>href="#id"</em> yang mengacu pada atribut <em>id</em> elemen tujuan.
+            Saat link diklik, browser langsung melompat (scroll) ke posisi elemen bertujuan tersebut tanpa memuat ulang halaman.
+            Fitur ini sangat berguna untuk halaman dengan konten panjang karena memudahkan navigasi pengguna menuju bagian tertentu
+            tanpa harus scroll manual. Setiap elemen tujuan harus memiliki id yang unik agar bookmark bekerja dengan benar.
+        </p>
+
+    </div>
+</div>
+
+<div id="footer">
+    <em>Mendysia Anggita Putri_253307004_2026</em>
+</div>
+
+</body>
+</html>

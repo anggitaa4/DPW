@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Box</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4CAF50, #81C784);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      width: 350px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #388E3C;
+      transform: scale(1.05);
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .ok {
+      color: green;
+    }
+
+    .cancel {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Confirm Box</h2>
+  <button onclick="cek()">Klik</button>
+
+  <p id="hasil"></p>
+</div>
+
+<script>
+function cek() {
+  let konfirmasi = confirm("Apakah kamu yakin?");
+  let hasil = document.getElementById("hasil");
+
+  if (konfirmasi) {
+    hasil.innerHTML = "✅ Kamu pilih OK";
+    hasil.className = "ok";
+  } else {
+    hasil.innerHTML = "❌ Kamu pilih Cancel";
+    hasil.className = "cancel";
+  }
+}
+</script>
+
+</body>
+</html>
