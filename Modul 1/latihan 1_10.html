@@ -1,90 +1,390 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Latihan 1.10 - KRS Mahasiswa</title>
-</head>
-<body>
+<html><head>
+        <meta charset="UTF-8">
+        <title>KRS Mahasiswa</title>
+                    <link href="https://assets.siakadcloud.com/assets/v1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+            <link href="https://assets.siakadcloud.com/assets/v1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+            <script src="https://assets.siakadcloud.com/assets/v1/js/external/jquery.min.js"></script>
+            <script src="https://assets.siakadcloud.com/assets/v1/js/forrep.js" type="text/javascript"></script>
+                <style type="text/css">
+                    body {
+                margin: 0 auto;
+            }
+            body, td, th {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 12px;
+            }
+            td, th {
+                vertical-align: top;
+            }
+            th {
+                text-align: center;
+            }
+            .font-normal th {
+                font-weight: normal;
+                vertical-align: middle;
+            }
+            .kop {
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+            .kop td {
+                padding: 0;
+                text-align: center;
+            }
+            .kop-univ td {
+                font-size: 16px;
+                line-height: 1.1;
+            }
+            .kop-fak td {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.1;
+            }
+            .kop-prodi td {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 1.1;
+                padding-bottom: 5px;
+            }
+            .header td, .header th {
+                font-size: 16px;
+            }
+            .mid td, .mid th {
+                font-size: 14px;
+            }
+            .center td, .center th {
+                text-align: center;
+                vertical-align: middle;
+            }
+            table.border {
+                border-collapse: collapse;
+            }
+            table.border td, table.border th {
+                border: 1px solid black;
+            }
+            tr.noborder td, tr.noborder th {
+                border: none;
+            }
+            hr {
+                margin: 10px auto;
+                border: 1px solid black;
+                border-width: 1px 0 0 0;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .btn-flat {
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                border-width: 1px;
+            }
+            .btn.btn-primary {
+                background-color: #0052A2;
+                border-color: #008D4C;
+            }
+            .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary.hover {
+                background-color: #008D4C;
+            }
+            .bg-info {
+                background-color: #D9EDF7;
+            }
+            .bg-success {
+                background-color: #DFF0D8;
+            }
 
-    <table width="100%" border="0">
-        <tr>
-            <td width="15%" align="center"><img src="logo.png" width="100"></td>
-            <td align="center">
-                <font size="4">KEMENTERIAN PENDIDIKAN, KEBUDAYAAN, RISET, DAN TEKNOLOGI</font><br>
-                <font size="5"><b>POLITEKNIK NEGERI MADIUN</b></font><br>
-                <font size="2">Jalan Serayu Nomor 84 Madiun Kode Pos 63133. Telepon +62 351 452970 Faksimile +62 351 452960<br>
-                Laman: www.pnm.ac.id. Surel: sekretariat@pnm.ac.id</font> 
-            </td>
-        </tr>
-    </table>
-    <hr size="3" color="black">
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .padded th, .padded td {
+                padding: 4px;
+            }
+            @media print {
+                .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+                  float: left;
+                }
+                .col-md-12 {
+                  width: 100%;
+                }
+                .col-md-11 {
+                  width: 91.66666666666666%;
+                }
+                .col-md-10 {
+                  width: 83.33333333333334%;
+                }
+                .col-md-9 {
+                  width: 75%;
+                }
+                .col-md-8 {
+                  width: 66.66666666666666%;
+                }
+                .col-md-7 {
+                  width: 58.333333333333336%;
+                }
+                .col-md-6 {
+                  width: 50%;
+                }
+                .col-md-5 {
+                  width: 41.66666666666667%;
+                }
+                .col-md-4 {
+                  width: 33.33333333333333%;
+                 }
+                 .col-md-3 {
+                   width: 25%;
+                 }
+                 .col-md-2 {
+                   width: 16.666666666666664%;
+                 }
+                 .col-md-1 {
+                  width: 8.333333333333332%;
+                 }
+            }
 
-    <h3 align="center">KARTU RENCANA STUDI (KRS)<br>SEMESTER GENAP TAHUN AKADEMIK 2022/2023</h3>
+            .footer {
+                background-color: #fab619;
+                height: 36px;
+                width: 100%;
+                margin-top: 20px;
+                position: relative;
+            }
+            .footer::after {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                content: url('https://assets.siakadcloud.com/assets/v1/img/obe/object-footer.svg');
+                height: 61px;
+            }
 
-    <table width="100%" border="0">
-        <tr>
-            <td width="15%">Nama Mahasiswa</td>
-            <td>: MENDYSIA ANGGITA PUTRI </td> 
-            <td width="15%">Jurusan</td>
-            <td>: Teknik</td> 
-        </tr>
-        <tr>
-            <td>NIM</td>
-            <td>: 253307004 </td> 
-            <td>Program Studi</td>
-            <td>: Teknologi Informasi</td> 
-        </tr>
-    </table>
+            @media print {
+                .footer.no-print {
+                    display: none;
+                }
+                .navbar.navbar-default{
+                    display: none !important;
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+            }
+                    </style>
+    </head>
+    <body style="">
+                    <nav class="navbar navbar-default">
+                <div class="container">
+                    <p class="navbar-brand">KRS Mahasiswa</p>
+                    <button type="button" class="btn btn-info btn-flat navbar-btn navbar-right" data-type="print"><i class="fa fa-print"></i> Cetak</button>
+                                                                <button type="button" class="btn btn-primary btn-flat navbar-btn navbar-right" data-type="list" style="margin-right:5px"><i class="fa fa-chevron-left"></i> Kembali ke Daftar</button>
+                                    </div>
+            </nav>
+        
+        <div align="center">
+            <div style="width: 700px">
+                <table style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 15%;" align="center"><img src="https://assets.siakadcloud.com/uploads/pnm/logoaplikasi/1124.jpg" alt="" width="98" height="98"></td>
+<td style="font-family: arial;" align="center"><strong style="font-size: 18.6px;">KEMENTERIAN PENDIDIKAN TINGGI,</strong><br><strong style="font-size: 18px;">SAINS DAN TEKNOLOGI<br></strong> <strong style="font-size: 16px;">POLITEKNIK NEGERI MADIUN<br></strong> Jalan Serayu Nomor 84 Madiun Kode Pos 63133 <br>Telepon +62 351 452970 Faksimile +62 351 452960<br>Laman: www.pnm.ac.id, Surel: sekretariat@pnm.ac.id</td>
+</tr>
+</tbody>
+</table>
+<hr style="border: 0; border-top: 5px double #8c8c8c; margin-top: 0;">
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+    <link rel="icon" type="img/png" href="https://assets.siakadcloud.com/uploads/pnm/logoaplikasi/1124.jpg" sizes="16x16">
 
-    <br>
-    <b>Mata Kuliah yang ditempuh:</b> 
-    
-    <table width="100%" border="1" cellspacing="0" cellpadding="5">
-        <tr bgcolor="#cccccc">
-            <th>No</th>
-            <th>Kode MK</th>
-            <th>Mata Kuliah</th>
-            <th>SKS</th>
-            <th>Kelas</th>
-            <th>Dosen Pengampu</th>
-        </tr>
-        <tr>
-            <td>1</td><td>MKU2201</td><td>Agama Islam</td><td align="center">2</td><td align="center">2B</td><td>Dr. Nanik Nurhayati, S.Ag., M.Pd.</td>
-        </tr>
-        <tr>
-            <td>2</td><td>TI22202</td><td>Pemrograman Mobile 1</td><td align="center">2</td><td align="center">2B</td><td>Sigit Kariagil Bimanugroho, S.Kom, M.T</td>
-        </tr>
-        <tr>
-            <td>3</td><td>TI22203</td><td>Praktik Pemrograman Mobile 1</td><td align="center">2</td><td align="center">2B</td><td>Sigit Kariagil Bimanugroho, S.Kom, M.T</td>
-        </tr>
-        <tr>
-            <td>4</td><td>TI22204</td><td>Manajemen Resiko Proyek</td><td align="center">2</td><td align="center">2B</td><td>Lutfiyah Dwi Setia, S.Kom., M.Kom</td>
-        </tr>
-        <tr>
-            <td>5</td><td>TI22205</td><td>Pemrograman Berbasis Obyek</td><td align="center">2</td><td align="center">2B</td><td>Ikhwan Baidlowi Sumafta, S.Kom, M.Kom</td>
-        </tr>
-        <tr>
-            <td>6</td><td>TI22206</td><td>Praktik Pemrograman Berbasis Obyek</td><td align="center">2</td><td align="center">2B</td><td>Ikhwan Baidlowi Sumafta, S.Kom, M.Kom</td>
-        </tr>
-        <tr>
-            <td>7</td><td>TI22207</td><td>Desain & Pemrograman Web</td><td align="center">2</td><td align="center">2B</td><td>Ardian Prima Atmaja, S.Kom., M.Cs.</td>
-        </tr>
-        <tr>
-            <td>8</td><td>TI22208</td><td>Praktik Desain & Pemrograman Web</td><td align="center">2</td><td align="center">2B</td><td>Ardian Prima Atmaja, S.Kom., M.Cs.</td>
-        </tr>
-        <tr>
-            <td colspan="3" align="right"><b>Jumlah</b></td>
-            <td align="center"><b>20</b></td> 
-            <td colspan="2"></td>
-        </tr>
-    </table>
+    <div align="center">
+        <table width="700px">
+            <tbody><tr>
+                <td align="center">
+                    <font size="3"><strong>KARTU RENCANA STUDI (KRS)</strong></font><br>
+                    <font size="3"><strong>SEMESTER  GENAP<br></strong></font>
+                    <font size="3"><strong>TAHUN AKADEMIK 2025/2026</strong></font>
+                </td>
+            </tr>
+        </tbody></table>
+        <table width="700px" cellpadding="0">
+            <tbody><tr>
+                <td width="210px" nowrap="">
+                    <font size="2"><strong>Nama Mahasiswa</strong></font>
+                </td>
+                <td width="220px">
+                    <font size="2">: MENDYSIA ANGGITA PUTRI</font>
+                </td>
+                <td width="80px" nowrap="">
+                    <font size="2"><strong>Jurusan</strong></font>
+                </td>
+                <td>
+                    <font size="2">: Teknik</font>
+                </td>
+            </tr>
+            <tr>
+                <td nowrap="">
+                    <font size="2"><strong>N I M</strong></font>
+                </td>
+                <td nowrap="">
+                    <font size="2">: 253307004</font>
+                </td>
+                <td nowrap="">
+                    <font size="2"><strong>Program Studi</strong></font>
+                </td>
+                <td nowrap="">
+                    <font size="2">: Teknologi Informasi</font>
+                </td>
+            </tr>
+        </tbody></table>
 
-    <br>
-    <table width="100%">
-        <tr>
-            <td width="70%">Mahasiswa,<br><br><br><br>(Mendysia Anggita Putri)</td>
-            <td>Madiun, 3 Februari 2023<br>Dosen Pembina Akademik,<br><br><br><br><b>Gus Nanang Syaifuddin, S.Kom, M.Kom</b></td>
-        </tr>
-    </table>
+        <div align="left">
+            <b>Mata Kuliah yang ditempuh :</b>
+        </div>
+        <table class="tb_data" width="700px" border="1" bordercolor="black" cellspacing="0" cellpadding="3">
+            <tbody><tr align="center">
+                <td class="HeaderBG">
+                    <font size="-1"><b>No</b></font>
+                </td>
+                <td class="HeaderBG">
+                    <font size="-1"><b>Kode MK</b></font>
+                </td>
+                <td class="HeaderBG">
+                    <font size="-1"><b>Mata Kuliah</b></font>
+                </td>
+                <td class="HeaderBG">
+                    <font size="-1"><b>SKS</b></font>
+                </td>
+                <td class="HeaderBG">
+                    <font size="-1"><b>Kelas</b></font>
+                </td>
+                <td class="HeaderBG">
+                    <font size="-1"><b>Dosen Pengampu</b></font>
+                </td>
+            </tr>
+                            <tr valign="top" class="AlternateBG" style="font-size:10pt">
+                    <td align="center">1.</td>
+                    <td align="center">MKU2401</td>
+                    <td align="left">Agama Islam</td>
+                    <td align="center">2</td>
+                    <td align="center">2A</td>
+                    <td align="left">Dr. Nanik Nurhayati, S.Ag., M.Pd.</td>
+                </tr>
+                            <tr valign="top" class="NormalBG" style="font-size:10pt">
+                    <td align="center">2.</td>
+                    <td align="center">TI24201</td>
+                    <td align="left">Komputasi Matematika</td>
+                    <td align="center">2</td>
+                    <td align="center">2A</td>
+                    <td align="left">Tri Septianto, S.Kom., M.Kom.</td>
+                </tr>
+                            <tr valign="top" class="AlternateBG" style="font-size:10pt">
+                    <td align="center">3.</td>
+                    <td align="center">TI24203</td>
+                    <td align="left">Manajemen Proyek Teknologi Informasi</td>
+                    <td align="center">2</td>
+                    <td align="center">2A</td>
+                    <td align="left">Lutfiyah Dwi Setia, S.Kom., M.Kom.</td>
+                </tr>
+                            <tr valign="top" class="NormalBG" style="font-size:10pt">
+                    <td align="center">4.</td>
+                    <td align="center">TI24204</td>
+                    <td align="left">Sistem Komunikasi Optic</td>
+                    <td align="center">3</td>
+                    <td align="center">2A</td>
+                    <td align="left">Muhammad Syaeful Fajar, S.Pd., M.Kom.</td>
+                </tr>
+                            <tr valign="top" class="AlternateBG" style="font-size:10pt">
+                    <td align="center">5.</td>
+                    <td align="center">TI24205</td>
+                    <td align="left">Pemrograman Berbasis Obyek</td>
+                    <td align="center">3</td>
+                    <td align="center">2A</td>
+                    <td align="left">Tri Lestariningsih, S.Kom., M.Kom</td>
+                </tr>
+                            <tr valign="top" class="NormalBG" style="font-size:10pt">
+                    <td align="center">6.</td>
+                    <td align="center">TI24206</td>
+                    <td align="left">Desain &amp; Pemrograman Web</td>
+                    <td align="center">3</td>
+                    <td align="center">2A</td>
+                    <td align="left">Angger Binuko Paksi, M.Kom.</td>
+                </tr>
+                            <tr valign="top" class="AlternateBG" style="font-size:10pt">
+                    <td align="center">7.</td>
+                    <td align="center">TI24207</td>
+                    <td align="left">Sistem Operasi</td>
+                    <td align="center">3</td>
+                    <td align="center">2A</td>
+                    <td align="left">Hery Maryanto, S.Pd., M.Kom.</td>
+                </tr>
+                            <tr valign="top" class="NormalBG" style="font-size:10pt">
+                    <td align="center">8.</td>
+                    <td align="center">TI24208</td>
+                    <td align="left">UI/UX Design</td>
+                    <td align="center">2</td>
+                    <td align="center">2A</td>
+                    <td align="left">Rahmania Kumalasari, S.Kom., M.Kom</td>
+                </tr>
+                        <tr>
+                <td align="center" colspan="3">Jumlah</td>
+                <td align="center">20</td>
+                <td align="left"></td>
+                <td align="left"></td>
+            </tr>
+        </tbody></table>
+                    <table class="tb_acc" width="700px">
+                <tbody><tr>
+                    <td align="left" width="40%">
+                        <br>
+                        Mahasiswa,
+                        <br><br><br><br><br>
+                        <u>MENDYSIA ANGGITA PUTRI</u><br>
+                        NIM. 253307004                    </td>
+                    <td>
+                        <!--                         <img src="/siakad/../uploads/pnm/fotomhs/thumb/253307004.png?47718" style="width:3cm; height:3.5cm; border:solid 1px #999999 "> -->
+                    </td>
+                    <td align="left" width="40%">
+                        Madiun,
+                        5 Maret 2026<br>
+                        Dosen Pembina Akademik,
+                        <br>
+                        <div style="width:3cm; height:1.5cm;"></div><br>Rahmania Kumalasari, S.Kom., M.Kom.<br>NIDN. 0723109601                    </td>
+                </tr>
+            </tbody></table>
+            </div>
+    <div style="page-break-after:always"></div>
 
-</body>
-</html>
+<style>
+    table.tb_identity {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    table.tb_title {
+        border: 1px solid;
+        margin-bottom: 12px;
+    }
+
+    table.tb_data th,
+    td {
+        vertical-align: middle;
+    }
+
+    table.tb_acc {
+        margin-top: 20px;
+    }
+</style>                            </div>
+        </div>
+
+        <!-- Tambahan footer untuk laporan OBE -->
+        
+        <!-- tambahan -->
+                <script src="https://assets.siakadcloud.com/assets/v1/js/forrep.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var list = "/siakad/set_krsmhs/MjUzMzA3MDA0";
+        </script>
+            
+
+</body></html>
