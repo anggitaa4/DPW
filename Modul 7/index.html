@@ -1,206 +1,160 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Praktikum 7</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Praktikum</title>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma;
-            background: linear-gradient(135deg, #dfe9f3, #ffffff);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.6s ease-in-out;
-        }
-
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            background: linear-gradient(90deg, #3498db, #6dd5fa);
-            color: white;
-            padding: 10px;
-            margin-top: 25px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 12px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: #3498db;
-        }
-
-        .btn {
-            text-decoration: none;
-            background: #3498db;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #2980b9;
-        }
-
-        .desc {
-            font-size: 14px;
-            color: #777;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #aaa;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(10px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-    </style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 30px;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card {
+  background: rgb(15, 237, 245);
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+.btn {
+  padding: 7px 16px;
+  background: #4CAF50;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.btn:hover {
+  background: #43a047;
+}
+</style>
 </head>
 
 <body>
 <div class="container">
-    <h1> Dashboard Praktikum JavaScript</h1>
-    <p class="subtitle">Daftar penyelesaian tugas Modul 7</p>
+  <h1>Dashboard Praktikum JavaScript</h1>
+  <div class="list">
+    <div class="card">
+      <div class="info">
+        <h3>1. Alert</h3>
+        <p>Menampilkan pesan</p>
+      </div>
+      <a href="alert.html" class="btn">Buka</a>
+    </div>
 
-    <div class="section-title">📌 Latihan Dasar (Modul)</div>
-    <ul>
-        <li>
-            <div>
-                <strong>1. Program Alert</strong>
-                <div class="desc">Menampilkan pesan "Hallo!" saat halaman dimuat.</div>
-            </div>
-            <a href="alert.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>2. Input</h3>
+        <p>Input nama</p>
+      </div>
+      <a href="input_data.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>2. Program Input Data</strong>
-                <div class="desc">Input nama menggunakan prompt.</div>
-            </div>
-            <a href="input_data.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>3. Confirm</h3>
+        <p>Konfirmasi pilihan</p>
+      </div>
+      <a href="confirm_box.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>3. Program Confirm Box</strong>
-                <div class="desc">Konfirmasi logout.</div>
-            </div>
-            <a href="confirm_box.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>4. Validasi</h3>
+        <p>Cek form</p>
+      </div>
+      <a href="validasi.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>4. Validasi Form</strong>
-                <div class="desc">Cek input tidak kosong.</div>
-            </div>
-            <a href="validasi.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>5. Radio</h3>
+        <p>Pilih opsi</p>
+      </div>
+      <a href="radio_box.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>5. Radio Box</strong>
-                <div class="desc">Pilih musik.</div>
-            </div>
-            <a href="radio_box.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>6. Password</h3>
+        <p>Verifikasi password</p>
+      </div>
+      <a href="verifikasi_password.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>6. Verifikasi Password</strong>
-                <div class="desc">Cek password sama.</div>
-            </div>
-            <a href="verifikasi_password.html" class="btn">Buka</a>
-        </li>
-    </ul>
+    <div class="card">
+      <div class="info">
+        <h3>7. Jam</h3>
+        <p>Waktu realtime</p>
+      </div>
+      <a href="realtime_date.html" class="btn">Buka</a>
+    </div>
 
-    <div class="section-title">Tugas Mandiri & jQuery</div>
-    <ul>
-        <li>
-            <div>
-                <strong>7. Real-time Clock</strong>
-                <div class="desc">Waktu update setiap detik.</div>
-            </div>
-            <a href="realtime_date.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>8. AJAX</h3>
+        <p>AJAX & jQuery</p>
+      </div>
+      <a href="ajax.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>8. AJAX & jQuery</strong>
-                <div class="desc">Penjelasan jQuery.</div>
-            </div>
-            <a href="ajax.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>9. Menu</h3>
+        <p>Menu interaktif</p>
+      </div>
+      <a href="jquery.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>9. Menu jQuery</strong>
-                <div class="desc">Navigasi interaktif.</div>
-            </div>
-            <a href="jquery.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>10. Dialog</h3>
+        <p>Popup dialog</p>
+      </div>
+      <a href="dialog_box.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>10. Dialog jQuery</strong>
-                <div class="desc">Popup interaktif.</div>
-            </div>
-            <a href="dialog_box.html" class="btn">Buka</a>
-        </li>
+    <div class="card">
+      <div class="info">
+        <h3>11. Progress</h3>
+        <p>Progress download</p>
+      </div>
+      <a href="dialog_download.html" class="btn">Buka</a>
+    </div>
 
-        <li>
-            <div>
-                <strong>11. Progress Download</strong>
-                <div class="desc">Simulasi progress bar.</div>
-            </div>
-            <a href="dialog_download.html" class="btn">Buka</a>
-        </li>
-    </ul>
-
-    <footer>
-        © 2026 Praktikum JavaScript | Dibuat oleh Anda
-    </footer>
 </div>
-
+</div>
 </body>
 </html>

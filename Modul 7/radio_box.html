@@ -1,33 +1,60 @@
-
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Mengakses Objek radio</title>
+    <title>Radio Musik</title>
+    <style>
+        body {
+            font-family: Segoe UI;
+            background: #5e6d81;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .box {
+            background: rgb(129, 66, 66);
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    Klik pada musik yang paling Anda sukai<br>
-    <form name="formTes">
-        <input type="radio" name="radioMusik" value="Jazz" onclick="info()">Jazz<br>
-        <input type="radio" name="radioMusik" value="Keroncong" onclick="info()">Keroncong<br>
-        <input type="radio" name="radioMusik" value="Dangdut" onclick="info()">Dangdut<br>
-        <input type="radio" name="radioMusik" value="Lainnya" onclick="info()">Lainnya<br>
+<div class="box">
+<h3>Pilih Musik Favorit</h3>
+    <form id="formTes">
+        <label><input type="radio" name="radioMusik" value="Jazz"> Jazz</label>
+        <label><input type="radio" name="radioMusik" value="Keroncong"> Keroncong</label>
+        <label><input type="radio" name="radioMusik" value="Dangdut"> Dangdut</label>
+        <label><input type="radio" name="radioMusik" value="Lainnya"> Lainnya</label>
         <hr>
-        Info: <input type="text" name="fieldMusik" size="40">
+
+        Info:
+        <input type="text" id="hasil" readonly>
     </form>
+</div>
 
-    <script language="JavaScript">
-        function info() {
+<script>
+    let radios = document.querySelectorAll('input[name="radioMusik"]');
+    let hasil = document.getElementById("hasil");
 
-            for (var i = 0; i < 4; i++) {
-
-                if (document.formTes.radioMusik[i].checked) {
-
-                    document.formTes.fieldMusik.value = document.formTes.radioMusik[i].value;
-                }
-            }
-        }
-    </script>
+    radios.forEach(function(radio){
+        radio.addEventListener("change", function(){
+            hasil.value = this.value;
+        });
+    });
+</script>
 </body>
-
 </html>

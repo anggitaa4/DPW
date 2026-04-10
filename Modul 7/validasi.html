@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Validasi</title>
-</head>
-<body>
+  <title>Validasi Form</title>
 
-<h2>Validasi Form</h2>
-<form onsubmit="return validasi()">
-  Nama: <input type="text" id="nama"><br><br>
-  <button type="submit">Submit</button>
-</form>
+  <style>
+    body {
+      font-family: Segoe UI;
+      background: #88a0c0;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .box {
+      background: rgb(116, 79, 79);
+      width: 300px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 15px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="box">
+  <h2>Validasi Form</h2>
+  <form onsubmit="return validasi()">
+    Nama:
+    <input type="text" id="nama">
+    <div id="errorNama" class="error"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
 
 <script>
 function validasi() {
   let nama = document.getElementById("nama").value;
-  if (nama == "") {
-    alert("Nama tidak boleh kosong!");
+  let error = document.getElementById("errorNama");
+
+  if (nama.trim() === "") {
+    error.innerHTML = "Nama tidak boleh kosong!";
     return false;
+  } else {
+    error.innerHTML = "";
+    alert("Data berhasil dikirim!");
+    return true;
   }
 }
 </script>
-
 </body>
 </html>

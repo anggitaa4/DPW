@@ -2,18 +2,54 @@
 <html>
 <head>
   <title>Waktu Real-Time</title>
+
+  <style>
+    body {
+      font-family: Segoe UI;
+      background: #f4f7fb;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .box {
+      background: rgb(77, 59, 59);
+      width: 300px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    #jam {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    #tanggal {
+      margin-top: 10px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Jam Sekarang</h2>
-<p id="jam"></p>
+<div class="box">
+  <h2>Waktu Sekarang</h2>
+  <div id="jam"></div>
+  <div id="tanggal"></div>
+</div>
 
 <script>
 function tampilWaktu() {
   let waktu = new Date();
-  document.getElementById("jam").innerHTML = waktu.toLocaleTimeString();
+  let jam = waktu.toLocaleTimeString();
+  let tanggal = waktu.toLocaleDateString();
+  document.getElementById("jam").innerHTML = jam;
+  document.getElementById("tanggal").innerHTML = tanggal;
 }
-
+tampilWaktu();
 setInterval(tampilWaktu, 1000);
 </script>
 

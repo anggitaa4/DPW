@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>AJAX & jQuery</title>
+  <meta charset="UTF-8">
+  <title>AJAX & jQuery Modern</title>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Segoe UI;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      text-align: center;
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      width: 400px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #hasil {
+      margin-top: 15px;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Penjelasan</h2>
-<p>AJAX adalah teknik untuk mengambil data tanpa reload halaman.</p>
-<p>JQuery adalah library JavaScript untuk mempermudah coding.</p>
+<div class="card">
+  <h2>AJAX & jQuery</h2>
 
-<button id="klik">Klik</button>
-<p id="hasil"></p>
+  <p>AJAX adalah teknik untuk mengambil data tanpa reload halaman.</p>
+  <p>jQuery adalah library JavaScript untuk mempermudah coding.</p>
+
+  <button id="klik">Klik jQuery</button>
+  <button id="ajax">Simulasi AJAX</button>
+
+  <p id="hasil"></p>
+</div>
 
 <script>
-$("#klik").click(function(){
-  $("#hasil").text("Ini contoh jQuery!");
+$(document).ready(function(){
+
+  // jQuery biasa
+  $("#klik").click(function(){
+    $("#hasil")
+      .hide()
+      .text("Ini contoh jQuery!")
+      .fadeIn();
+  });
+
+  // Simulasi AJAX
+  $("#ajax").click(function(){
+    $("#hasil")
+      .hide()
+      .text("Mengambil data...")
+      .fadeIn();
+
+    setTimeout(function(){
+      $("#hasil")
+        .hide()
+        .text("Data berhasil dimuat tanpa reload halaman!")
+        .fadeIn();
+    }, 1500);
+  });
+
 });
 </script>
 

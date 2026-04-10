@@ -3,54 +3,69 @@
 
 <head>
     <title>Program Menu jQuery</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
     <style>
-        .ui-menu {
+        body {
+            font-family: Segoe UI;
+            background: #354a66;
+            padding: 50px;
+        }
+
+        .container {
+            width: 260px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #menu {
             width: 200px;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
 
-    <h2>Menu Navigasi jQuery</h2>
+<div class="container">
+    <h2>Menu Navigasi</h2>
 
-    <ul id="menu Utama">
-        <li>
-            <div>Beranda</div>
-        </li>
+    <ul id="menu">
+        <li><div>Beranda</div></li>
+
         <li>
             <div>Profil Produk</div>
             <ul>
-                <li>
-                    <div>Elektronik</div>
-                </li>
-                <li>
-                    <div>Pakaian</div>
-                </li>
-                <li>
-                    <div>Otomotif</div>
-                </li>
+                <li><div>Elektronik</div></li>
+                <li><div>Pakaian</div></li>
+                <li><div>Otomotif</div></li>
             </ul>
         </li>
-        <li>
-            <div>Kontak Kami</div>
-        </li>
+
+        <li><div>Kontak Kami</div></li>
+
         <li class="ui-state-disabled">
             <div>Layanan Segera Hadir</div>
         </li>
     </ul>
+</div>
 
-    <script>
-        $(function () {
-            // Inisialisasi widget menu [cite: 259]
-            $("#menu").menu();
-        });
-    </script>
+<script>
+    $(function () {
+        $("#menu").menu();
+    });
+</script>
 
 </body>
-
 </html>
